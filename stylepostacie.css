@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: url('obrazy/tlo5.png');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center;
+    padding: 0 10px;
+}
+
+header {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 210px;
+    transition: 0.5s ease;
+}
+
+header .nawigacja {
+    position: relative;
+}
+
+header .nawigacja .znaki_nawigacji a {
+    position: relative;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    padding-right: 20px;
+    transition: 0.3s ease;
+    text-shadow: 1px 1px 8px black;
+}
+
+header .nawigacja .znaki_nawigacji a:before {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: color 0.3s ease;
+}
+
+header .nawigacja .znaki_nawigacji a:hover:before {
+    width: 100%;
+    background: #f3ce67;
+}
+
+.postacie {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 5vw 0;
+}
+
+.postacie th, .postacie td {
+    padding: 10px;
+    text-align: left;
+}
+
+.postacie th {
+    background-color: white;
+}
+
+.postacie img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.postacie td {
+    border-bottom: 1px solid #ffffff;
+    color: white;
+}
+
+
+@media (max-width: 1200px) {
+    header {
+        padding: 15px 100px;
+    }
+}
+
+@media (max-width: 992px) {
+    header {
+        padding: 15px 50px;
+    }
+
+    .postacie th, .postacie td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .zawartosc {
+        margin-top: 13%;
+    }
+
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .nawigacja .znaki_nawigacji a {
+        font-size: 0.9em;
+        padding-right: 15px;
+    }
+
+    .postacie th, .postacie td {
+        padding: 6px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 576px) {
+    .zawartosc {
+        margin-top: 13%;
+    }
+
+    .postacie {
+        font-size: 0.8em;
+    }
+
+    .postacie img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .postacie th, .postacie td {
+        padding: 4px;
+
+    }
+}
+
+@media (max-width: 400px) {
+    .zawartosc {
+        margin-top: 13%;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    header .nawigacja .znaki_nawigacji a {
+        font-size: 0.8em;
+        padding-right: 10px;
+    }
+
+    .postacie th, .postacie td {
+        padding: 2px;
+    }
+
+    .postacie img {
+        width: 50px;
+        height: 50px;
+    }
+}

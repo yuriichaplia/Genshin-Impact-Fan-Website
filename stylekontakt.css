@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-image: url('obrazy/tlo7.png');
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+  min-height: 100vh;
+}
+
+header {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 210px;
+    transition: 0.5s ease;
+}
+
+header .nawigacja {
+    position: relative;
+}
+
+header .nawigacja .znaki_nawigacji a {
+    position: relative;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    padding-right: 20px;
+    transition: 0.3s ease;
+    text-shadow: 1px 1px 3px black;
+}
+
+header .nawigacja .znaki_nawigacji a:before {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: color 0.3s ease;
+}
+
+header .nawigacja .znaki_nawigacji a:hover:before {
+    width: 100%;
+    background: #f3ce67;
+}
+
+.formularz {
+  width: 100%;
+  max-width: 715px;
+  margin-top: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+.formularz h1 {
+  font-size: 22px;
+  color: white;
+  font-weight: 600;
+  padding: 20px 30px;
+  border-bottom: 1px solid white;
+  text-shadow: 2px 2px 20px black;
+}
+
+.formularz form {
+    margin: 35px 30px;
+}
+
+.formularz p {
+    color: white;
+    margin: 20px 30px;
+    
+}
+
+form .obszar {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+  justify-content: space-between;
+}
+
+.obszar .pole {
+  height: 50px;
+  display: flex;
+  position: relative;
+  width: calc(100% / 2 - 13px);
+  margin-bottom: 15px;
+}
+
+.formularz form i {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  color: #ccc;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+form .pole input,
+form .wiadomosc textarea {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 18px 0 48px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.pole input::placeholder,
+.wiadomosc textarea::placeholder {
+  color: #ccc;
+}
+
+.pole input:focus,
+.wiadomosc textarea:focus {
+  padding-left: 47px;
+  border: 2px solid #fc2d03;
+}
+
+.pole input:focus ~ i,
+.wiadomosc textarea:focus ~ i {
+  color: #fc2d03;
+}
+
+form .wiadomosc {
+  position: relative;
+}
+
+form .wiadomosc i {
+  top: 30px;
+  font-size: 20px;
+}
+
+form .wiadomosc textarea {
+  min-height: 130px;
+  max-height: 230px;
+  max-width: 100%;
+  min-width: 100%;
+  padding: 15px 20px 0 48px;
+}
+
+.wiadomosc textarea:focus {
+  padding-top: 14px;
+}
+
+form .przycisk {
+  margin: 25px 0;
+  display: flex;
+  align-items: center;
+}
+
+.przycisk button {
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 13px 25px;
+  background: #fc2d03;
+  transition: background 0.3s ease;
+}
+
+.przycisk button:hover {
+  background: #8f1800;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+  .formularz {
+    margin-top: 70px;
+    padding: 0 10px;
+  }
+  form .obszar .pole {
+    width: 100%;
+  }
+}

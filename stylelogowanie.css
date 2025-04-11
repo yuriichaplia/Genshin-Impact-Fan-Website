@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: url('obrazy/tlo6.png');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 210px;
+    transition: 0.5s ease;
+}
+
+header .nawigacja {
+    position: relative;
+}
+
+header .nawigacja .znaki_nawigacji a {
+    position: relative;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    padding-right: 20px;
+    transition: 0.3s ease;
+    text-shadow: 1px 1px 8px black;
+}
+
+header .nawigacja .znaki_nawigacji a:before {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: color 0.3s ease;
+}
+
+header .nawigacja .znaki_nawigacji a:hover:before {
+    width: 100%;
+    background: #f3ce67;
+}
+
+.logowanie {
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(9px);
+    color: #fff;
+    border-radius: 12px;
+    padding: 30px 40px;
+}
+
+.logowanie h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.logowanie .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    transform: translate(-50%);
+    font-size: 20px;
+}
+
+.logowanie .pamietaj {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.pamietaj label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.pamietaj a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.pamietaj a:hover {
+    text-decoration: underline;
+}
+
+.logowanie .przycisk {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    text-align: center;
+    justify-content: center;
+    align-items : center;
+}
+
+
+@media (max-width: 1200px) {
+    header {
+        padding: 15px 100px;
+    }
+}
+
+@media (max-width: 992px) {
+    header {
+        padding: 15px 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+    
+    .logowanie {
+        width: 80%;
+        padding: 20px 30px;
+    }
+    
+    .logowanie h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logowanie {
+        margin-top: 10%;
+        width: 90%;
+        padding: 15px 20px;
+    }
+    
+    .logowanie h1 {
+        font-size: 24px;
+    }
+    
+    .input-box input {
+        font-size: 14px;
+        padding: 15px 35px 15px 15px;
+    }
+    
+    .input-box i {
+        font-size: 18px;
+    }
+    
+    .logowanie .przycisk {
+        height: 40px;
+        font-size: 14px;
+    }
+    
+    .pamietaj {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .pamietaj label, .pamietaj a {
+        font-size: 13px;
+    }
+}
