@@ -1,2 +1,2 @@
 # Genshin
-Webpage dedicated to game named Genshin Impact
+Webpage dedicated to the game named Genshin Impact.
